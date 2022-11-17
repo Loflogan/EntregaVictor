@@ -1,0 +1,14 @@
+{% extends 'appcoder/base.html' %}
+
+
+{% block contenido %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Crear estudiante">
+    
+</form>
+
+{% endblock %}

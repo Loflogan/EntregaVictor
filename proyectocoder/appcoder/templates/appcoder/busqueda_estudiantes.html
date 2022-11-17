@@ -1,0 +1,25 @@
+{% extends 'appcoder/base.html' %}
+
+
+{% block contenido %}
+
+<form method="get">
+
+    <p>
+        Nombre estudiante: <input type="text" name="nombre_alumno">
+    </p>
+    <input type="submit" value="Buscar">
+</form>
+
+
+{% if listado_alumnos %}
+
+<ul>
+    {% for alumno in listado_alumnos %}
+    <li>{{alumno.nombre}} {{alumno.apellido}}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+
+{% endblock %}
